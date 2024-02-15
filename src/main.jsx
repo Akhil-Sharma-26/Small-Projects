@@ -27,6 +27,7 @@ import User, { githubAPIcall } from './Pages/User_Page.jsx'
 //     ]
 //   }
 // ])
+// Both above and below are right things... just different syntax
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>

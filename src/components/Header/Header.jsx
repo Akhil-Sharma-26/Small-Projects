@@ -77,7 +77,7 @@ export default function Header() {
                                         ${isActive ? "text-orange-500" : "text-gray-800"}
                                         border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
-                                    to="/user/:id"
+                                    to="/users/:id"
                                 >
                                     User
                                 </NavLink>
