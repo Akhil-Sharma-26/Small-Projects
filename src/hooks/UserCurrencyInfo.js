@@ -2,10 +2,10 @@ import { useEffect,useState } from "react";
 
 function useCurrencyInfo(currency){
     const [data,setData]=useState({})
-    let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
+    let url = import.meta.env.VITE_CURRENCY_API
 
     useEffect(()=>{
-        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+        fetch(`${url}${currency}.json`)
         .then((res)=> res.json())
         .then((res)=> setData(res[currency]))
         // console.log(data);
