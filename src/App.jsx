@@ -9,13 +9,12 @@ import { ThemeProvider } from './context/Theme.js';
 function App() {
     return (
         <>  
-            <ThemeProvider value={{themeMode,darkTheme,lightTheme}}>
-            <UserContextProvider>
-                <Header />
-                    <Outlet />
-                <Footer />
-            </UserContextProvider>
-            </ThemeProvider>
+            
+                <UserContextProvider>
+                    <Header />
+                        <Outlet />
+                    <Footer />
+                </UserContextProvider>
         </>
     );
 }

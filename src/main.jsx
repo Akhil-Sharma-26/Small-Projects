@@ -8,6 +8,7 @@ import About from './Pages/About_Page.jsx'
 import Contact from './Pages/Contact_Me.jsx'
 import User, { githubAPIcall } from './Pages/User_Page.jsx'
 import { Login, Profile } from './components/index.js'
+import Theme from './Pages/Theme_Changer.jsx'
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -41,6 +42,7 @@ const router = createBrowserRouter(
       element={<User/>  }/>
       <Route path='/login' element={<Login/>  }/>
       <Route path='/profile' element={<Profile/>  }/>
+      <Route path='/theme-changer' element={<Theme/>  }/>
     </Route>
     
   )
