@@ -12,7 +12,7 @@ export default function Profile(){
     console.log(user);
     return (
         <div>
-            Welcome {user.usernmae} !!
+            Welcome {user.username} !!
         </div>
     )
 }
