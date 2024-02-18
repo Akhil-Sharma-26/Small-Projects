@@ -7,6 +7,7 @@ import HomePage from './Pages/Home_Page.jsx'
 import About from './Pages/About_Page.jsx'
 import Contact from './Pages/Contact_Me.jsx'
 import User, { githubAPIcall } from './Pages/User_Page.jsx'
+import { Login, Profile } from './components/index.js'
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -38,7 +39,10 @@ const router = createBrowserRouter(
       loader={githubAPIcall}
       path='/users/:id' 
       element={<User/>  }/>
+      <Route path='/login' element={<Login/>  }/>
+      <Route path='/profile' element={<Profile/>  }/>
     </Route>
+    
   )
 )
 
