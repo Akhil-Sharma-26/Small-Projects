@@ -9,6 +9,7 @@ import Contact from './Pages/Contact_Me.jsx'
 import User, { githubAPIcall } from './Pages/User_Page.jsx'
 import { Login, Profile } from './components/index.js'
 import Theme from './Pages/Theme_Changer.jsx'
+import TodoList from '../src/components/TodosList.jsx'
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -30,6 +31,8 @@ import Theme from './Pages/Theme_Changer.jsx'
 //   }
 // ])
 // Both above and below are right things... just different syntax
+import { Provider } from 'react-redux'
+import { store } from '../src/store/store.js'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
@@ -43,13 +46,14 @@ const router = createBrowserRouter(
       <Route path='/login' element={<Login/>  }/>
       <Route path='/profile' element={<Profile/>  }/>
       <Route path='/theme-changer' element={<Theme/>  }/>
+      <Route path='/todo' element={<TodoList/>  }/>
     </Route>
     
   )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router}/>
-  </React.StrictMode>,
+  </Provider>,
 )

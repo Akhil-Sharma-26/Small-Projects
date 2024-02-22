@@ -13,10 +13,21 @@ export const todoSlicer = createSlice({
         addTodo: (state,action)=>{ // state->Tells the current value of initState. action->arg kinda
             const newTodo = {
                 id: nanoid(),
-                text:action.payload.text, // payload is a object
+                text:action.payload, // payload is a object
             }
-            state.todos.push(newtodo)
+            console.log(action.payload);
+            state.todos.push(newTodo)
         },
-        removeTodo: (state,action)=>{},
+        removeTodo: (state,action)=>{
+            state.todos = state.todos.filter((todos)=>todos.id !== action.payload)
+            console.log(action.payload);
+        },
+        updateTodo: (state,action)=>{
+            // Do
+        },
     }
 })
+
+export const {addTodo,removeTodo}=todoSlicer.actions
+
+export default todoSlicer.reducer
